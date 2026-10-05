@@ -1,0 +1,85 @@
+* { box-sizing: border-box; }
+:root {
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+  color-scheme: light;
+  color: var(--text);
+  background: var(--page);
+  --text: #253b39;
+  --page: #f3f6f4;
+  --surface: #fff;
+  --field: #fcfdfc;
+  --field-border: #bbc9c2;
+  --placeholder: #73817b;
+  --hover-border: #859e93;
+  --soft: #f8faf8;
+  --card-hover: #fafcfb;
+  --avatar: #e7f1eb;
+  --avatar-text: #2c6655;
+  --danger: #a13c35;
+  --danger-border: #ebd8d5;
+  --danger-hover: #fff1ef;
+  --button-text: #fff;
+  --muted: #61716e;
+  --accent: #23685a;
+  --accent-hover: #194e43;
+  --border: #dce5df;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+}
+[data-theme="dark"] {
+  color-scheme: dark;
+  --text: #e3eee9;
+  --page: #101a17;
+  --surface: #192621;
+  --field: #14201b;
+  --field-border: #4b6257;
+  --placeholder: #93a99d;
+  --hover-border: #7da791;
+  --soft: #15221c;
+  --card-hover: #203128;
+  --avatar: #2a4336;
+  --avatar-text: #b2e0c5;
+  --danger: #ffb3a9;
+  --danger-border: #70433d;
+  --danger-hover: #3a2623;
+  --button-text: #10271c;
+  --muted: #a8bcb0;
+  --accent: #8bc9a8;
+  --accent-hover: #a5dfbf;
+  --border: #334b3e;
+}
+body { margin: 0; min-width: 320px; }
+button, input { font: inherit; }
+button { cursor: pointer; }
+h1, h2, h3, p { margin: 0; }
+input, button { border-radius: 10px; }
+input {
+  width: 100%;
+  min-width: 0;
+  min-height: 48px;
+  padding: 11px 14px;
+  border: 1px solid var(--field-border);
+  background: var(--field);
+  color: inherit;
+  transition: border-color 160ms, box-shadow 160ms;
+}
+input::placeholder { color: var(--placeholder); }
+input:hover { border-color: var(--hover-border); }
+input:focus { border-color: var(--accent); background: var(--surface); }
+button {
+  min-height: 44px;
+  padding: 11px 18px;
+  border: 1px solid transparent;
+  background: var(--accent);
+  color: var(--button-text);
+  font-weight: 600;
+  transition: background 160ms, border-color 160ms, box-shadow 160ms;
+}
+button:hover { background: var(--accent-hover); }
+input:focus-visible, button:focus-visible { outline: 3px solid #439883; outline-offset: 3px; }
+::selection { background: #cde9dc; color: #194e43; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; }
+}
